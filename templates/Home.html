@@ -1,0 +1,104 @@
+{% load static %}
+<html>
+<head>
+<!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+<title>YogShaakti</title>
+</head>
+<body class="home">
+  <div id="header">
+    <img id="img_h" src="./assets/images/logo.png" alt="Loading..">
+    <div class="header_menu">
+      <h3 id="home"><a href="{% url 'home' %}">Home</a></h3>
+      <h3 id="video"><a href="{% url 'yoga_videos' %}">Videos</a></h3>
+      <h3 id="post"><a href="{% url 'yoga_post' %}">Posts</a></h3>
+      <h3 id="gallery"><a href="{% url 'yoga_gallery' %}">Gallery</a></h3>
+      <h3 id="review"><a href="{% url 'yoga_review' %}">Reviews</a></h3>
+      <h3 id="about"><a href="{% url 'about_us' %}">About</a></h3>
+    </div>
+  </div>
+
+<div id="block2">
+  <img id="img2" src="./assets/images/Group_1.png" alt="Loading..">
+  <h1 id="text1">Yoga For Everyone</h1>
+  <h4 id="text2">Complete A to Z body part YOGA by Certified Yoga and Ayurvedic Specialist Instructor</h4>
+  <a href="https://www.facebook.com/SejalShahVirmani"><button type="button" id="btn" ><b id="btnText">Sejal Shah Virmani</b></button></a>
+</div>
+
+<img src="./assets/images/img3.png" alt="Loading.." id="img3">
+<h1 id="text3">MIND, BODY and SPIRIT..!</h1>
+<h3 id="text4">Experience Positivity of a Powerful, Beneficial, Authentic, and Energetic VIRTUAL YOGA from a comfort of Your Home!</h3>
+
+<div id="block3">
+  <h1 id="text5">Gallery</h1>
+  <div id="innerblock">
+    <img id="inimg1" src="./assets/images/img_1.jpg" alt="Loading..">
+    <img id="inimg2" src="./assets/images/img_4.jpg" alt="Loading..">
+    <img id="inimg3" src="./assets/images/img_3.jpg" alt="Loading..">
+    <img id="inimg4" src="./assets/images/img_2.jpg" alt="Loading..">
+    <img id="inimg5" src="./assets/images/img_5.jpg" alt="Loading..">
+    <img id="inimg6" src="./assets/images/img_6.jpg" alt="Loading..">
+    <img id="inimg7" src="./assets/images/img_7.jpg" alt="Loading..">
+    <img id="inimg7" src="./assets/images/img_8.jpg" alt="Loading..">
+    <img id="inimg7"  src="./assets/images/img_9.jpg" alt="Loading..">
+    <img id="inimg7" src="./assets/images/img_10.jpg" alt="Loading..">
+  </div>
+</div>
+<div class="review_blog">
+  <h1 id="text6">Customer Reviews</h1>
+  <div class="review_list">
+    <div id="inblock1"><p><br>I would appreciate it very <br>and will send you<br> Nyochhawar too... as you are<br> doing a great Sewa Karya<br> which is commendable.. these<br> days you can't find people<br> with this great attitude.<br><br><br><br><b>- Jyoti Shah</b></p></div>
+  <div id="inblock2"><p><br>I appreciate, you are a<br> wonderful Guru. I have<br> learned quite a few asanas<br> and still have to work on<br> perfecting some. My sincere<br> gratitude to guru Sejal for<br> tremendous effort and<br> generosity with your time .<br><br><br><b>- Harsha sheth</b></p></div>
+  <div id="inblock3"><p><br>I am attending Yog Shakti<br> from last few years our yoga<br> Guru Mrs. Sejal Shah Virmani<br> is a very dedicated,<br> knowledgeable & very<br> Helping person in a short she<br>is a unique creation of human<br> beyond my imagination.<br><br><br><b>- Niru Purohit</b></P></div>
+  <div id="inblock4"><p><br>Hello Sejal, One of our<br> friends was interested in<br> joining. I have shared your<br> link with them. Their names<br> are Yashwant Parekh and<br> Padma Parekh.<br><br><br><br><br><b>- Saryu Shukla</b></p></div>
+  </div>
+</div>
+<div id="block4">
+  <div id="innerblock2">
+    <form>
+      <input type="text" id="input1" placeholder="Enter Your Name" required></input>
+      <input type="number" id="input2" placeholder="Enter Your Phone Number" required></input>
+      <input type="email" id="input3" placeholder="Enter Your Email" required></input>
+      <img id="dollar" src="./assets/images/dollar.png" alt="Loading..">
+      <input type="number" id="input4" min="0" max="200" placeholder="0" required></input>
+      <input type="text" id="input5" placeholder="Enter Your Address" required></input>
+      <input type="text" id="input6" placeholder="your message/suggestion (if any)"></input>
+      <button type="reset" id="btn2">
+        <p id="text8">CANCLE</p>
+        <p id="text9"><img id="cross" src="./assets/images/x-button.png" alt="Loading.."></p>
+      </button>
+      <button type="submit" id="btn3">
+        <p id="text8">PAY NOW</p>
+        <p id="text9"><img id="cross" src="./assets/images/donation.png" alt="Loading.."></p>
+      </button>
+    </form>
+  </div>
+  <img src="./assets/images/pay_now_img.png" alt="Loading..." id="img8">
+</div>
+<div id="footer">
+  <div class="footer_logo">
+    <img src="./assets/images/logo.png" alt="Loading..." id="img_f">
+    <p id="text10">Mind, Body and Sprite!</p>
+  </div>
+  <div class="footer_link">
+    <p id="links">Links</p>
+    <div class="link_list">
+    <p id="Home_f"><a href="./assets/images/Home.html">Home</a></p>
+    <p id="Video_f"><a href="./assets/images/Videos.html">Videos</a></p>
+    <p id="post_f"><a href="./assets/images/post.html">Posts</a></p>
+    <p id="gallery_f"><a href="./assets/images/gallery.html">Gallery</a></p>
+    <p id="review_f"><a href="./assets/images/review.html">Reviews</a></p>
+    <p id="about_f"><a href="./assets/images/about.html">About</a></p>
+  </div>
+  </div>
+  <div class="footer_social_icon">
+    <p id="follow">Follow Us</p>
+    <a href="https://www.facebook.com/SejalShahVirmani"><img src="./assets/images/facebook.png"
+        alt="Loading..." id="facebook"></a>
+    <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="./assets/images/youtube.png"
+        alt="Loading..."></a>
+  </div>
+</div>
+
+</body>
+</html>
