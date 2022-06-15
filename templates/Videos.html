@@ -24,7 +24,16 @@
     <h1 id="text1">Videos</h1>
   </div>
   <div class="videos_list">
+    {% for i in data %}
+    {{ i.title }}
+    <video width="320" height="240" controls>
+      <source src="{{i.video_file.url}}" type="video/mp4">
+      
+      Your browser does not support the video tag.
+    </video>
+    {% endfor %}
     
+
   <div id="vb1">
     <video id="v1" controls>
       <source src="" type="">

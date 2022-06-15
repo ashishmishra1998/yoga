@@ -1,12 +1,15 @@
 from django.shortcuts import render
-
+from .models import UploadVideo
 # Create your views here.
 
 def index(request):
     return render(request, 'Home.html')
 
 def yoga_videos(request):
-    return render(request, 'Videos.html')
+    print('Called')
+    data = UploadVideo.objects.all()
+    print(data)
+    return render(request, 'Videos.html',{'data' : data})
 
 def yoga_post(request):
     return render(request, 'post.html')
