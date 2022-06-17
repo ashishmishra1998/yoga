@@ -15,7 +15,7 @@
 
 <body>
   <div id="header">
-    <img id="img_h" src="./assets/images/logo.png" alt="Loading..">
+    <img id="img_h" src="{% static 'assets/images/logo.png' %}" alt="Loading..">
     <div class="header_menu">
       <h3 id="home"><a href="./Home.html">Home</a></h3>
       <h3 id="video"><a href="./Videos.html">Videos</a></h3>
@@ -41,9 +41,9 @@
       <form action="" method="post">
         <input type="text" placeholder="Enter Your Name" id="input1"></input>
         <div class="social_icon_contact">
-          <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="./assets/images/youtube.png"
+          <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="{% static 'assets/images/youtube.png' %}"
               alt="Loding.." id="youtube1"></a>
-          <a href="https://www.facebook.com/SejalShahVirmani"><img src="./assets/images/facebook.png" alt="Loading.."
+          <a href="https://www.facebook.com/SejalShahVirmani"><img src="{% static 'assets/images/facebook.png' %}" alt="Loading.."
               id="facebook1"></a>
         </div>
         <input type="text" placeholder="Enter Your Message.." id="input2"></input>
@@ -69,9 +69,9 @@
     </div>
     <div class="footer_social_icon">
       <p id="follow">Follow Us</p>
-      <a href="https://www.facebook.com/SejalShahVirmani"><img src="./assets/images/facebook.png"
+      <a href="https://www.facebook.com/SejalShahVirmani"><img src="{% static 'assets/images/facebook.png' %}"
           alt="Loading..." id="facebook"></a>
-      <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="./assets/images/youtube.png"
+      <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="{% static 'assets/images/youtube.png' %}"
           alt="Loading..."></a>
     </div>
   </div>

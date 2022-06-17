@@ -24,14 +24,14 @@
     <h1 id="text1">Videos</h1>
   </div>
   <div class="videos_list">
-    {% for i in data %}
+    {% comment %} {% for i in data %}
     {{ i.title }}
     <video width="320" height="240" controls>
       <source src="{{i.video_file.url}}" type="video/mp4">
       
       Your browser does not support the video tag.
     </video>
-    {% endfor %}
+    {% endfor %} {% endcomment %}
     
 
   <div id="vb1">
@@ -120,9 +120,9 @@
     </div>
     <div class="footer_social_icon">
       <p id="follow">Follow Us</p>
-      <a href="https://www.facebook.com/SejalShahVirmani"><img src="./assets/images/facebook.png"
+      <a href="https://www.facebook.com/SejalShahVirmani"><img src="{% static 'assets/images/facebook.png' %}"
           alt="Loading..." id="facebook"></a>
-      <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="./assets/images/youtube.png"
+      <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="{% static 'assets/images/youtube.png' %}"
           alt="Loading..."></a>
     </div>
   </div>
