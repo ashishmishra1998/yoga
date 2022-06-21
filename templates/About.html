@@ -39,21 +39,23 @@
   <div id="block3">
     <div id="inblock">
       <form action="" method="post">
-        <input type="text" placeholder="Enter Your Name" id="input1"></input>
+      {% csrf_token %}
+        <input type="text" name="fname" placeholder="Enter Your Name" id="input1"></input>
+        <input type="text" name="email" placeholder="Enter Your Email" ></input>
         <div class="social_icon_contact">
           <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="{% static 'assets/images/youtube.png' %}"
               alt="Loding.." id="youtube1"></a>
           <a href="https://www.facebook.com/SejalShahVirmani"><img src="{% static 'assets/images/facebook.png' %}" alt="Loading.."
               id="facebook1"></a>
         </div>
-        <input type="text" placeholder="Enter Your Message.." id="input2"></input>
+        <input type="text" name="message" placeholder="Enter Your Message.." id="input2"></input>
         <button type="submit" id="btn1">Send Feedback</button>
       </form>
     </div>
   </div>
   <div id="footer">
     <div class="footer_logo">
-      <img src="./assets/images/logo.png" alt="Loading..." id="img_f">
+      <img src="{% static 'assets/images/logo.png' %}" alt="Loading..." id="img_f">
       <p id="text10">Mind, Body and Sprite!</p>
     </div>
     <div class="footer_link">

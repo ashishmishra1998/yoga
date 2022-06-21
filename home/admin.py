@@ -8,5 +8,13 @@ class upload(admin.ModelAdmin):
 class uploadimg(admin.ModelAdmin):
     pass
 
+class uploadgallery(admin.ModelAdmin):
+    pass
+
+class contact(admin.ModelAdmin):
+    pass
+
+
 admin.site.register(UploadVideo, upload)
-admin.site.register(UploadImage, uploadimg)
+admin.site.register(UploadPost, uploadimg)
+admin.site.register(Contact, contact)

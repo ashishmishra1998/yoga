@@ -21,13 +21,20 @@
     </div>
   </div>
 <div class="post_list">
+
+  {% for i in data %}
+      
+    <p> {{ i.title }} </p>
+    <img src="{{i.image_file.url}}" alt="" id="img1">
+    {% endfor %} 
+
   <img src="" alt="" id="img1">
   <img src="" alt="" id="img1">
   <img src="" alt="" id="img1">
 </div>
   <div id="footer">
     <div class="footer_logo">
-      <img src="./assets/images/logo.png" alt="Loading..." id="img_f">
+      <img src="{% static 'assets/images/logo.png' %}" alt="Loading..." id="img_f">
       <p id="text10">Mind, Body and Sprite!</p>
     </div>
     <div class="footer_link">
