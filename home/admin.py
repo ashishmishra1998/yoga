@@ -18,3 +18,4 @@ class contact(admin.ModelAdmin):
 admin.site.register(UploadVideo, upload)
 admin.site.register(UploadPost, uploadimg)
 admin.site.register(Contact, contact)
+admin.site.register(UploadGallery, uploadgallery)
