@@ -26,83 +26,17 @@
    <div class="videos_list">
   {% for i in data %}
       <div id="vb1">
-    <video id="v1" controls>
-       <source src="{{i.video_file.url}}" type="video/mp4">
-    <p id="vt1"> {{ i.title }} </p>
-    </div>
+        <p id="vt1"> {{ i.title | safe }} </p>
+          <video id="v1" controls>
+            <source src="{{i.video_file.url}}" type="video/mp4">
+            </video>
+      </div>
     {% endfor %} 
 
   </div> 
 
    
-
-  <div id="vb1">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">Yog Shakti Present Cosmology For Skin Care</p>
-  </div>
-  <div id="vb2">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">Yoga For Beginners</p>
-  </div>
-  <div id="vb3">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">Yog Shakti Live Yoga Session 10-31-2021</p>
-  </div>
-  <div id="vb1">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">Yog Shakti With Yog Gurus</p>
-  </div>
-  <div id="vb2">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">A to Z Complete Body Yoga</p>
-  </div>
-  <div id="vb3">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">Natural, Ayurvedic, and Herbal<br> Homemade Deep Condi.</p>
-  </div>
-  <div id="vb1">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">Yog Shakti</p>
-  </div>
-  <div id="vb2">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">Natural Homemade Moisturizer</p>
-  </div>
-  <div id="vb3">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">Ayurvedic Herbal Homemade Facepack</p>
-  </div>
-  <div id="vb1">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">Change Your Water, Change Your Life!</p>
-  </div>
-  <div id="vb2">
-    <video id="v1" controls>
-      <source src="" type="">
-    </video>
-    <p id="vt1">Yog Shakti Session With Yog Gurus</p>
-  </div>
-
+ 
   </div>
   <div id="footer">
     <div class="footer_logo">

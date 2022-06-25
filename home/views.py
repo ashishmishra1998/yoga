@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from django.template import Context
 from django.template.loader import render_to_string, get_template
 from django.core.mail import EmailMessage
+from django.contrib import messages
 # Create your views here.
 
 def index(request):
@@ -57,5 +58,6 @@ def about_us(request):
         sendmail(request, email, name,message)
         data = Contact.objects.create(name=name, email=email ,message=message)
         data.save()
+        messages.success(request, 'Thank You')
 
     return render(request, 'About.html')

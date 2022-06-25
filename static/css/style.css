@@ -34,9 +34,10 @@ img#img_h {
 }
 
 .header_menu h3 {
-    letter-spacing: 31px;
-    text-align: left;
-    opacity: 1;
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #B5179E;
+    cursor: pointer;
 }
 
 .header_menu h3 a {
@@ -261,20 +262,21 @@ p#text10 {
     text-align: left;
     font-size: 88px;
     letter-spacing: 0px;
-    color: #FE0000;
+    color: #B5179E;
     opacity: 1;
 }
 
 .home #text2 {
-    
     width: 412px;
     height: 108px;
     font: italic normal 800 26px/36px var(--unnamed-font-family-open-sans);
     text-align: left;
-    font: italic normal 800 26px/36px Open Sans;
     letter-spacing: 0px;
-    color: #00CC29;
+    color: #3d3d3d;
+    font-family: 'Raleway', sans-serif;
     opacity: 1;
+    font-size: 21px;
+    line-height: 1.3;
 }
 .banner_image img {
     width: 90%;
@@ -291,21 +293,23 @@ p#text10 {
 .home #btn {
     width: 350px;
     height: 50px;
-    background: transparent linear-gradient(100deg, #00DC2C 0%, #51AE00 100%) 0% 0% no-repeat padding-box;
+    background-color: #B5179E;
     box-shadow: 0px 0px 0px 0px #00000029;
     border-radius: 40px;
     border-color: inherit;
     opacity: 1;
+    color: #fff;
+    border: none;
 }
 
 .home #text3 {
     margin-top: 80px;
     text-align: center;
-    text-align: center;
-    font: normal normal 900 90px/130px Raleway;
     letter-spacing: 0px;
-    color: #FF0011;
+    color: #B5179E;
     opacity: 1;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
 }
 
 .home #text4 {
@@ -313,11 +317,11 @@ p#text10 {
     font: italic normal var(--unnamed-font-weight-900) 50px/59px var(--unnamed-font-family-raleway);
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: center;
-    font: italic normal 900 50px/59px Raleway;
     letter-spacing: 0px;
-    color: #5CB701;
+    color: #3d3d3d;
     opacity: 1;
-    margin:  0 15px;
+    font-size: 16px;
+    margin: 0 15px;
 }
 
 .home #block3 {
@@ -359,7 +363,7 @@ p#text10 {
 
 .home .review_blog div > div {
     width: 250px;
-    height: 450px;
+    min-height: 260px;
     background: #FFFFFF;
     box-shadow: 3px 3px 10px #00000026;
     border-radius: 30px;
