@@ -16,9 +16,7 @@ def yoga_videos(request):
     return render(request, 'Videos.html',{'data' : data})
 
 def yoga_post(request):
-    data = UploadPost.objects.all()
-    print('Called')
-    print(data)
+    data = UploadPost.objects.all() 
     return render(request, 'post.html',{'data' : data})
     
 
@@ -31,11 +29,28 @@ def yoga_review(request):
 
 def sendmail(request, email, name, message):
     email = email
-    print(email)
+    email_owner = "ashishsharad007@gmail.com"
+
     ctx = {
         'name': name,
         'email' : email,
         'message' : message 
+    }
+    message = get_template('contact_mail.html').render(ctx)
+    msg = EmailMessage(
+        'Contact Inquiry!',
+         message,
+        'ashishsharad007@gmail.com',
+        [email_owner],
+    )
+    msg.content_subtype ="html"# Main content is now text/html
+    msg.send()
+
+def client_mail(request, email):
+    email = email
+    ctx = {
+        
+        'message' : 'Thank You for Inquiry we will surely contact you.' 
     }
     message = get_template('contact_mail.html').render(ctx)
     msg = EmailMessage(
@@ -51,13 +66,16 @@ def sendmail(request, email, name, message):
 @csrf_exempt
 def about_us(request): 
     if request.method == "POST":
-        print('Called')
-        name =  request.POST.get('fname')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
-        sendmail(request, email, name,message)
-        data = Contact.objects.create(name=name, email=email ,message=message)
-        data.save()
-        messages.success(request, 'Thank You')
+        try:
+            name =  request.POST.get('fname')
+            email = request.POST.get('email')
+            message = request.POST.get('message')
+            sendmail(request, email, name,message)
+            client_mail(request,email)
+            data = Contact.objects.create(name=name, email=email ,message=message)
+            data.save()
+            messages.success(request, 'Thank You')
+        except:
+            messages.error(request,'Please check mail id')
 
     return render(request, 'About.html')

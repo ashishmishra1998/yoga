@@ -3,14 +3,17 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>Videos</title>
 </head>
 
 <body class="videos">
   <div id="header">
-    <img id="img_h" src="./assets/images/logo.png" alt="Loading..">
+    <img id="img_h" src="{% static 'assets/images/logo.png' %}" alt="Loading..">
     <div class="header_menu">
       <h3 id="home"><a href="{% url 'home' %}">Home</a></h3>
       <h3 id="video"><a href="{% url 'yoga_videos' %}">Videos</a></h3>
@@ -20,16 +23,17 @@
       <h3 id="about"><a href="{% url 'about_us' %}">About</a></h3>
     </div>
   </div>
+
   <div>
     <h1 id="text1">Videos</h1>
   </div>
    <div class="videos_list">
   {% for i in data %}
       <div id="vb1">
-        <p id="vt1"> {{ i.title | safe }} </p>
+        <span id="vt1"> {{ i.title | safe }} </span>
           <video id="v1" controls>
             <source src="{{i.video_file.url}}" type="video/mp4">
-            </video>
+          </video>
       </div>
     {% endfor %} 
 

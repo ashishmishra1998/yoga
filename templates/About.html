@@ -3,6 +3,9 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <meta charset="utf-8">
@@ -15,8 +18,8 @@
   <title>About</title>
 </head>
 
-<body>
-  <div id="header">
+<body class="about">
+   <div id="header">
     <img id="img_h" src="{% static 'assets/images/logo.png' %}" alt="Loading..">
     <div class="header_menu">
       <h3 id="home"><a href="{% url 'home' %}">Home</a></h3>
@@ -26,8 +29,10 @@
       <h3 id="review"><a href="{% url 'yoga_review' %}">Reviews</a></h3>
       <h3 id="about"><a href="{% url 'about_us' %}">About</a></h3>
     </div>
-  </div>
-  <div>
+  </div>  
+  
+
+  <div class="about_text">
     <h1 id="head1">About Us</h1>
     <p id="text1">A powerful, beneficial and authentic Yoga Session includes Pranayams (breathing exercises) to
       detoxicate internal system, regenerate positive energy, balance chemicals, cholesterol levels, sugar level;
@@ -39,27 +44,38 @@
     <h1 id="head2">Contact Us</h1>
   </div>
   
+  {% if messages %}
     {% for message in messages %}
-    <div class="alert alert-success" id="divMessage">
-                                <p>{{ message }}</p>
-                              </div>
-                            {% endfor %}
+      {% if message.tags == "success" %}
+      <div class="alert alert-success" id="divMessage">
+        <p>{{ message }}</p>
+      </div>
+      {% else %}
+        <div class="alert alert-danger" id="divMessage">
+          <p>{{ message }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+                          
   
 
   <div id="block3">
     <div id="inblock">
       <form action="" method="post">
       {% csrf_token %}
-        <input type="text" name="fname" placeholder="Enter Your Name" id="input1"></input>
-        <input type="text" name="email" placeholder="Enter Your Email" ></input>
+        <input type="text" required name="fname" placeholder="Enter Your Name" id="input1"></input>
+        <input type="text" required name="email" placeholder="Enter Your Email" ></input>
+       
+        <input type="text" required name="message" placeholder="Enter Your Message.." id="input2"></input>
+        <button type="submit" id="btn1">Send Feedback</button>
         <div class="social_icon_contact">
           <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="{% static 'assets/images/youtube.png' %}"
               alt="Loding.." id="youtube1"></a>
           <a href="https://www.facebook.com/SejalShahVirmani"><img src="{% static 'assets/images/facebook.png' %}" alt="Loading.."
               id="facebook1"></a>
         </div>
-        <input type="text" name="message" placeholder="Enter Your Message.." id="input2"></input>
-        <button type="submit" id="btn1">Send Feedback</button>
       </form>
     </div>
   </div>
@@ -91,5 +107,5 @@
 
 </html>
 <script>
-  $("#divMessage").show().delay(5000).fadeOut();
+  $("#divMessage").show().delay(3000).fadeOut();
 </script>

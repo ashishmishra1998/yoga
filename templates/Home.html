@@ -1,9 +1,14 @@
 {% load static %}
 <html>
 <head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
   <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>YogShaakti</title>
+   
 </head>
 <body class="home">
   <div id="header">
@@ -16,6 +21,7 @@
       <h3 id="review"><a href="{% url 'yoga_review' %}">Reviews</a></h3>
       <h3 id="about"><a href="{% url 'about_us' %}">About</a></h3>
     </div>
+    
   </div>
 
 <div id="block2">
@@ -61,14 +67,24 @@
 </div>
 <div id="block4">
   <div id="innerblock2">
-    <form>
+    <div class="contac_side_image">
+      <img src="{% static 'assets/images/pay_now_img.png' %}"  alt="Loading..." id="img8">
+    </div>
+    <form class='donet_form'>
+      <div>
       <input type="text" id="input1" placeholder="Enter Your Name" required></input>
       <input type="number" id="input2" placeholder="Enter Your Phone Number" required></input>
       <input type="email" id="input3" placeholder="Enter Your Email" required></input>
-      <img id="dollar" src="./assets/images/dollar.png" alt="Loading..">
+    </div>
+    <div>
+      <div class='donet_price'>
+      <img id="dollar" src="{% static 'assets/images/dollar.png' %}"  alt="Loading..">
       <input type="number" id="input4" min="0" max="200" placeholder="0" required></input>
-      <input type="text" id="input5" placeholder="Enter Your Address" required></input>
-      <input type="text" id="input6" placeholder="your message/suggestion (if any)"></input>
+      </div>
+      <textarea type="text" id="input5" placeholder="Enter Your Address" required></textarea>
+      <textarea type="text" id="input6" placeholder="your message/suggestion (if any)"></textarea>
+    </div>
+    <p class='donet_button_group'>
       <button type="reset" id="btn2">
         <p id="text8">CANCLE</p>
         <p id="text9"><img id="cross" src="{% static 'assets/images/x-button.png' %}" alt="Loading.."></p>
@@ -77,11 +93,10 @@
         <p id="text8">PAY NOW</p>
         <p id="text9"><img id="cross" src="{% static 'assets/images/donation.png' %}" alt="Loading.."></p>
       </button>
+    </p>
     </form>
   </div>
-  <div class="contac_side_image">
-      <img src="{% static 'assets/images/pay_now_img.png' %}"  alt="Loading..." id="img8">
-    </div>
+
 </div>
 <div id="footer">
   <div class="footer_logo">

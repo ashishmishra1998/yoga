@@ -3,12 +3,14 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>Gallery</title>
 </head>
 
-<body>
+<body class="gallary">
   <div id="header">
     <img id="img_h" src="{% static 'assets/images/logo.png' %}" alt="Loading..">
     <div class="header_menu">
@@ -19,6 +21,8 @@
       <h3 id="review"><a href="{% url 'yoga_review' %}">Reviews</a></h3>
       <h3 id="about"><a href="{% url 'about_us' %}">About</a></h3>
     </div>
+  </div>
+
   </div>
   <div id="maindiv">
     <img src="{% static 'assets/images/gimg_1.jpg' %}"  alt="Loading.." id="p1">
@@ -49,8 +53,18 @@
     <img src="{% static 'assets/images/gimg_1.jpg' %}" alt="Loading.." id="p1">
     <img src="{% static 'assets/images/gimg_2.jpg' %}" alt="Loading.." id="p1">
     <img src="{% static 'assets/images/gimg_3.jpg' %}" alt="Loading.." id="p1">
-    <img src="{% static 'assets/images/gimg_4.jpg' %}" alt="Loading.." id="p1">
+    
   </div>
+
+  <div class='post_data_list_wrp'>
+    {% for i in data %}
+      <div class="post_list">
+        {{ i.title  | safe}} 
+        <img src="{{i.image_file.url}}" alt="" id="img1" />
+      </div>
+    {% endfor %} 
+  </div>
+
   <div id="footer">
     <div class="footer_logo">
       <img src="{% static 'assets/images/logo.png' %}" alt="Loading..." id="img_f">
