@@ -23,11 +23,19 @@
     </div>
 
   <div id="maindiv">
+    {% for i in data_review %}
+      <div class="id="tb1"">
+        
+        <p id="text">{{ i.name  | safe}}</p>
+        <p id="reviews">{{ i.message  | safe}}</p> 
+        
+      </div>
+    {% endfor %} 
     <div id="tb1">
       <p id="text">Dhrusti Suthar</p>
       <p id="reviews">Sunt sed incidunt. Assumenda repellendus quam. Est corporis eligendi veritatis repellendus occaecati sunt voluptate maiores expedita.</p>
     </div>
-    <div id="tb1">
+    {% comment %} <div id="tb1">
       <p id="text">Drashti Sukla</p>
       <p id="reviews">Voluptatem deleniti temporibus ut. Libero occaecati sapiente nihil nesciunt soluta odit. Aut illo sit quia iste quisquam quia dolores repellat saepe. Est voluptate rem rerum odio quaerat rerum.</p>
     </div>
@@ -78,9 +86,10 @@
     <div id="tb1">
       <p id="text">Drasti Yadav</p>
       <p id="reviews">Voluptatem deleniti temporibus ut. Libero occaecati sapiente nihil nesciunt soluta odit. Aut illo sit quia iste quisquam quia dolores repellat saepe. Est voluptate rem rerum odio quaerat rerum.</p>
-    </div>
+    </div> {% endcomment %}
   </div>
 
+ 
 
   <div id="footer">
     <div class="footer_logo">

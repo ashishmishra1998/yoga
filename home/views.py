@@ -25,7 +25,8 @@ def yoga_gallery(request):
     return render(request, 'gallery.html',{'data' : data})
     
 def yoga_review(request):
-    return render(request, 'review.html')
+    data_review = Customer_reviews.objects.all()
+    return render(request, 'review.html',{'data_review' : data_review})
 
 def sendmail(request, email, name, message):
     email = email
@@ -65,6 +66,7 @@ def client_mail(request, email):
 
 @csrf_exempt
 def about_us(request): 
+    about_content = About_us.objects.all()
     if request.method == "POST":
         try:
             name =  request.POST.get('fname')
@@ -78,4 +80,4 @@ def about_us(request):
         except:
             messages.error(request,'Please check mail id')
 
-    return render(request, 'About.html')
+    return render(request, 'About.html',{'about_content' : about_content})

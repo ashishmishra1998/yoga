@@ -43,6 +43,16 @@
       issues & possible Herbal and Ayurvedic remedies/solutions!!</p>
     <h1 id="head2">Contact Us</h1>
   </div>
+
+  <div class='post_data_list_wrp'>
+    {% for i in about_content %}
+      <div class="post_list">
+        
+        {{ i.content  | safe}} 
+        
+      </div>
+    {% endfor %} 
+  </div>
   
   {% if messages %}
     {% for message in messages %}
