@@ -10,7 +10,7 @@
   <title>Posts</title>
 </head>
 
-<body>
+<body class="post-page">
   <div id="header">
     <img id="img_h" src="{% static 'assets/images/logo.png' %}" alt="Loading..">
     <div class="header_menu">
@@ -23,24 +23,35 @@
     </div>
   </div>
 
-  <div class='post_data_list_wrp'>
-  {% for i in data %}
-      <div class="post_list">
-        {{ i.title  | safe}} 
-        <img src="{{i.image_file.url}}" alt="" id="img1" />
-      </div>
-      <div class="post_list">
-        {{ i.title  | safe}} 
-        <img src="{{i.image_file.url}}" alt="" id="img1" />
-      </div>   <div class="post_list">
-        {{ i.title  | safe}} 
-        <img src="{{i.image_file.url}}" alt="" id="img1" />
-      </div>   <div class="post_list">
-        {{ i.title  | safe}} 
-        <img src="{{i.image_file.url}}" alt="" id="img1" />
-      </div>
-    {% endfor %} 
-  </div>
+
+
+
+  <div class='post_wrap'>
+        <div class="post_box">
+          <img src="{% static 'assets/images/gimg_21.jpg' %}" alt="" />
+        </div>
+        <div class="post_box">
+          <img src="{% static 'assets/images/gimg_21.jpg' %}" alt="" />
+        </div>   
+        <div class="post_box">
+          <img src="{% static 'assets/images/gimg_21.jpg' %}" alt="" />
+        </div>   
+        <div class="post_box">
+          <img src="{% static 'assets/images/gimg_21.jpg' %}" alt="" />
+        </div>
+        <div class="post_box">
+          <img src="{% static 'assets/images/gimg_21.jpg' %}" alt="" />
+        </div>
+        <div class="post_box">
+          <img src="{% static 'assets/images/gimg_21.jpg' %}" alt="" />
+        </div>   
+        <div class="post_box">
+          <img src="{% static 'assets/images/gimg_21.jpg' %}" alt="" />
+        </div>   
+        <div class="post_box">
+          <img src="{% static 'assets/images/gimg_21.jpg' %}" alt="" />
+        </div>
+    </div>
 
   <div id="footer">
     <div class="footer_logo">
