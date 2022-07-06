@@ -4,7 +4,7 @@ body {
     width: auto;
     height: auto;
     margin: 8px;
-    background-color: #fff8ea;
+    background-color: #C2EAFF;
     /*0% 0% no-repeat padding-box;*/
     font-family: 'Raleway', sans-serif;
     opacity: 1;
@@ -300,9 +300,9 @@ p#text10 {
     display: inline-block;
     
     text-align: left;
-    font-size: 88px;
+    font-size: 111px;
     letter-spacing: 0px;
-    color: #B5179E;
+    color: #FE0000;
     opacity: 1;
 }
 
@@ -312,7 +312,7 @@ p#text10 {
     font: italic normal 800 26px/36px var(--unnamed-font-family-open-sans);
     text-align: left;
     letter-spacing: 0px;
-    color: #3d3d3d;
+    color: #00CC29;
     font-family: 'Raleway', sans-serif;
     opacity: 1;
     font-size: 21px;
@@ -333,7 +333,7 @@ p#text10 {
 .home #btn {
     width: 350px;
     height: 50px;
-    background-color: #B5179E;
+    background: transparent linear-gradient(100deg, #00DC2C 0%, #51AE00 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 0px 0px #00000029;
     border-radius: 40px;
     border-color: inherit;
