@@ -404,9 +404,7 @@ p#text10 {
     margin: 60px auto;
 }
 
-.donet_form div {
-    display: grid;
-}
+ 
 .contac_side_image {
     text-align: center;
     margin-bottom: 30px;
@@ -416,10 +414,11 @@ p#text10 {
 }
 form.donet_form textarea {
     margin-bottom: 15px;
-    border: 1px solid #B5179E;
+    border: none;
     padding: 5px 10px;
     font-size: 16px;
     border-radius: 3px;
+    background-color: #F2F2F2;
 }
 .home #innerblock{
     display: flex;
@@ -434,11 +433,12 @@ form.donet_form textarea {
     object-fit: cover;
 }
 body.home #innerblock2 input {
-    margin-bottom: 15px;
-    border: 1px solid #B5179E;
+    margin-bottom: 40px;
+    border: none;
     padding: 5px 10px;
     font-size: 16px;
     border-radius: 3px;
+    background-color: #F2F2F2;
 }
 .home #img8 {
  
@@ -687,6 +687,52 @@ body.gallary {
     box-shadow: 3px 3px 6px #00000029;
     border-radius: 15px;
 }
+.donet_form_main {
+    display: flex;
+    justify-content: space-around;
+}
+#cancle_btn{
+    background: #FF0000 0% 0% no-repeat padding-box;
+box-shadow: 3px 3px 5px #0000001A;
+border-radius: 5px;
+opacity: 1;
+height: 36px;
+border: none;
+color: #fff;
+display: flex;
+justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+#cancle_btn p{
+    margin: 0;
+    font-weight: 700;
+}
+img#img8 {
+    width: 170px;
+    height: fit-content;
+}
+.donet_form_box{
+    display: flex;
+    flex-direction: column;
+}
+#pay_now_btn{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00CC29 0% 0% no-repeat padding-box;
+box-shadow: 3px 3px 5px #0000001A;
+border-radius: 5px;
+opacity: 1;
+color: #fff;
+height: 36px;
+margin-top: 40px;
+}
+#pay_now_btn p{
+    margin: 0;
+    font-weight: 700;
+}
 /* responcive */
 @media (max-width: 1199px) { 
     #block2{
@@ -831,6 +877,14 @@ body.gallary {
     }
     #btn1{
          width: inherit;
+    }
+    .donet_form_main{
+        flex-direction: column;
+        gap: 60px;
+    }
+    img#img8{
+        margin: 0 auto;
+        display: block;
     }
 }
 @media (max-width: 425px) {
