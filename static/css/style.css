@@ -548,6 +548,19 @@ img#cross {
     font-weight: 700;
     font-size: 18px;
 }
+.video_box {
+    background-color: #fff;
+    height: fit-content;
+    line-height: 0;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.video_box span#vt1 p, .video_box span#vt1 h1 {
+    font-size: 16px !important;
+    line-height: 16px;
+    margin: 0;
+}
+
 .post_list img{
     width: 100%;
     object-fit: contain;
@@ -598,7 +611,7 @@ span#vt1 p{
 .review_page #maindiv{
     justify-content: space-between;
     margin: 60px 30px 30px 30px;
-    gap: 0;
+    gap: 10px;
 }
 div#maindiv #tb1{
     flex: 1 1 25%;
@@ -610,7 +623,7 @@ div#maindiv #tb1 p {
     color: #838383;
 }
 .review_page #maindiv div{
-    background: #FFFFFF;
+    background: transparent;
     box-shadow: 3px 3px 10px #00000026;
     border-radius: 30px;
     padding: 20px;
@@ -622,14 +635,7 @@ div#maindiv #tb1 p {
 .about_text{
     margin: 0 15px;
 }
-body.review_page #tb1 {
-    flex: 0 0 45% !important;
-    margin: 0 0 40px 0 !important;
-    background: transparent !important;
-    padding: 0;
-    box-shadow: none;
-    width: 45%;
-}
+ 
 body.review_page {
     background-color: #C2EAFF;
 }
@@ -640,7 +646,7 @@ body.review_page #tb1 p#text {
     color: #FF0000 !important;
     font-size: 24px;
     font-weight: bold;
-    padding-left: 40px;
+ 
     margin: 0;
 }
 body.gallary .gallery-images {
@@ -754,7 +760,7 @@ margin-top: 40px;
         height: 30vw;
     }
     body.review_page #tb1 {
-        flex: 0 0 100% !important;
+        flex: 0 0 95% !important;
         width: 100% !important;
         margin-bottom: 25px !important;
     }
@@ -904,3 +910,27 @@ margin-top: 40px;
     height:250px;
     border-radius: 20px;
  }
+
+ /* smile */
+
+ .t-div img {
+    width: 56px;
+}
+
+.t-div h1 {
+    font-family: 'Roboto';
+    color: #00ca46;
+    width: 220px;
+}
+
+.t-div {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    {% comment %} border: 1px solid gray; {% endcomment %}
+    /* width: 100%; */
+    max-width: 400px;
+    height: 210px;
+    justify-content: center;
+    border-radius: 30px;
+}

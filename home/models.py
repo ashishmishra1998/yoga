@@ -30,6 +30,9 @@ class UploadGallery(models.Model):
 
     def __str__(self):
         return strip_tags(self.title)
+
+    class Meta:
+        verbose_name_plural = "uploadGallery"
     
 
 class Contact(models.Model):
@@ -47,6 +50,9 @@ class Customer_reviews(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = "customer_reviews"
+
 
 class About_us(models.Model):
     content = RichTextField(null = True)
@@ -55,6 +61,9 @@ class About_us(models.Model):
         if not self.pk and About_us.objects.exists():
             messages.error(request, 'There can be only 1 About Us')
         return super(About_us, self).save(*args, **kwargs)
+
+    class Meta:
+        verbose_name_plural = "about_us"
 
    
 
