@@ -796,6 +796,16 @@ img#img8 {
     font-weight: 700;
 }
 
+.contact-form-bg {
+    background: linear-gradient(#23b8bf75, #23b8bf75),url(https://i.postimg.cc/26nkJnBy/Screenshot-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 -15px;
+    padding: 10% 0;
+}
+.contact-form-bg div#block3{
+    position: relative;
+}
 /* responcive */
 
 
@@ -1026,7 +1036,7 @@ img#img8 {
 .t-div h1 {
     font-family: 'Roboto';
     color: #00ca46;
-    width: 220px;
+ 
 }
 
 .t-div {
@@ -1034,9 +1044,16 @@ img#img8 {
     align-items: center;
     background: #fff;
     border: 1px solid gray;
-    /* width: 100%; */
-    max-width: 400px;
-    height: 210px;
-    justify-content: center;
-    border-radius: 30px;
+    width: 100%;
+    justify-content: normal;
+    border-radius: 10px;
+    height: 100%;
+    padding: 2rem;
+}
+.thankyou {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }

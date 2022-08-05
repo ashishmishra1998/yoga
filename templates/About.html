@@ -54,7 +54,7 @@
     {% endfor %} 
   </div>
   
-  {% if messages %}
+  {% comment %} {% if messages %}
     {% for message in messages %}
       {% if message.tags == "success" %}
       <div class="alert alert-success" id="divMessage">
@@ -66,36 +66,41 @@
         </div>
       {% endif %}
     {% endfor %}
-  {% endif %}
+  {% endif %} {% endcomment %}
 
                           
   
-
-  <div id="block3">
-    <div id="inblock">
-      <form action="" method="post">
-      {% csrf_token %}
-        <input type="text" required name="fname" placeholder="Enter Your Name" id="input1"></input>
-        <input type="text" required name="email" placeholder="Enter Your Email" ></input>
-       
-        <input type="text" required name="message" placeholder="Enter Your Message.." id="input2"></input>
-        <button type="submit" id="btn1">Send Feedback</button>
-        <div class="social_icon_contact">
-          <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="{% static 'assets/images/Youtube.png' %}"
-              alt="Loding.." id="youtube1"></a>
-          <a href="https://www.facebook.com/SejalShahVirmani"><img src="{% static 'assets/images/facebook.png' %}" alt="Loading.."
-              id="facebook1"></a>
+  <div class="contact-form-bg">
+    <div id="block3">
+      <div id="inblock">
+        <form action="" method="post">
+        {% csrf_token %}
+          <input type="text" required name="fname" placeholder="Enter Your Name" id="input1"></input>
+          <input type="text" required name="email" placeholder="Enter Your Email" ></input>
+        
+          <input type="text" required name="message" placeholder="Enter Your Message.." id="input2"></input>
+          <button type="submit" id="btn1">Send Feedback</button>
+          <div class="social_icon_contact">
+            <a href="https://youtube.com/channel/UCSaQ0GrPfLjuqaG8Hnd5Z0Q"><img src="{% static 'assets/images/Youtube.png' %}"
+                alt="Loding.." id="youtube1"></a>
+            <a href="https://www.facebook.com/SejalShahVirmani"><img src="{% static 'assets/images/facebook.png' %}" alt="Loading.."
+                id="facebook1"></a>
+          </div>
+        </form>
+      </div>
+      {% if messages %}
+      <div class="thankyou" id="Message_display">
+        <div class="t-div">
+            <h1>Thank You For Contacting Us</h1>
+            <img src="{% static 'assets/images/smile.png' %}">
         </div>
-      </form>
+        {% endif %}
+      </div> 
     </div>
   </div>
+  
 
-  {% comment %} <div class="thankyou">
-    <div class="t-div">
-        <h1>Thank You For Contacting Us</h1>
-        <img src="{% static 'assets/images/smile.png' %}">
-    </div>
-  </div> {% endcomment %}
+ 
 
   <div id="footer">
     <div class="footer_logo">
@@ -125,5 +130,5 @@
 
 </html>
 <script>
-  $("#divMessage").show().delay(3000).fadeOut();
+  $("#Message_display").show().delay(3000).fadeOut();
 </script>
